@@ -26,10 +26,24 @@ body:after {
 	color: #fff;
 	padding: 10px 25px;
 }
+.back-button {
+	margin-bottom: 10px;
+}
 section.main {
 	width: 100%;
 	color: #fff;
 	padding: 50px 25px 10px;
+}
+section.main table {
+	border-collapse:collapse;
+	width: 100%;
+	margin-top: 30px;
+}
+
+section.main table td {
+	border: 1px solid #fff;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.6);
 }
 
 section.main ul {
@@ -66,14 +80,15 @@ section.main ul li a {
 .pages .page {
 	display: none;
 	position: relative;
-	left: -100%;
+	opacity: 0;
 	transition: 0.5s;
 }
 
 .pages .page.active {
 	display: block;
 	left: 0;
+	opacity: 1;
 }
 .pages .page.hide {
-	left: 100%;
+	opacity: 0;
 }
