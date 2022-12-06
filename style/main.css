@@ -63,3 +63,17 @@ section.main ul li a {
 .alert.hide {
 	bottom: -70px;
 }
+.pages .page {
+	display: none;
+	position: relative;
+	left: -100%;
+	transition: 0.5s;
+}
+
+.pages .page.active {
+	display: block;
+	left: 0;
+}
+.pages .page.hide {
+	left: 100%;
+}

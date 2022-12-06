@@ -8,25 +8,86 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="logo">MRIYA RESORT & SPA</div>
-		<section class="main">
-			<h1>Добро пожаловать в Mriya!</h1>
-			<h2>Навигация: </h2>
-			<ul>
-				<li><a href="transport.html" onclick="showError();">Развозка</a></li>
-				<li><a href="#" onclick="showError();">Мероприятия</a></li>
-				<li><a href="#" onclick="showError();">Юридическая помощь</a></li>
-				<li><a href="#" onclick="showError();">Зарплата и отпуск</a></li>
-				<li><a href="#" onclick="showError();">Навигатор</a></li>
-				<li><a href="#" onclick="showError();">Магазин</a></li>
-			</ul>
-		</section>	
+	<div class="logo" onclick="openPage('main');">MRIYA RESORT & SPA</div>
+	<div class="pages">
+		<div class="page active" id="page-main">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Добро пожаловать в Mriya!</h1>
+					<h2>Навигация: </h2>
+					<ul>
+						<li onclick="openPage('transport');">Развозка</li>
+						<li onclick="openPage('salary');">Юридическая помощь</li>
+						<li onclick="openPage('navigator');">Зарплата и отпуск</li>
+						<li onclick="openPage('shop');">Навигатор</li>
+						<li onclick="openPage('analityc');">Магазин</li>
+						<li onclick="openPage('transport');">Отчеты</li>
+					</ul>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-transport">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Информация о развозках</h1>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-legal">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Юридическая помощь</h1>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-salary">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Заплата и отпуск</h1>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-navigator">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Навигатор</h1>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-shop">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Магазин</h1>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-analityc">
+			<div class="wrapper">
+				<section class="main">
+					<h1>Магазин</h1>
+				</section>	
+			</div>
+		</div>			
 	</div>
+	
 	<div class="alert hide">
 		Недоступно. Скоро добавим!
 	</div>
 	<script>
+		function openPage(name) {
+			let pages = $('.pages .page');
+			pages.addClass('hide');
+
+			setTimeout(() => {  
+				pages.removeClass('hide');
+				pages.removeClass('active');
+				let page = $('#page-'+name);
+				page.addClass("active"); 
+			
+			}, 500);
+
+			
+		}
 		function showError() {
 			$(".alert").removeClass("hide");
 			setTimeout(() => {  $(".alert").addClass("hide");; }, 2000);
