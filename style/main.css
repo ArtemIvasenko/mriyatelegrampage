@@ -34,6 +34,15 @@ section.main {
 	color: #fff;
 	padding: 50px 25px 10px;
 }
+
+section.main h1 {
+	margin-bottom: 20px;
+}
+
+section.main .table {
+	max-width: 100%;
+	overflow-x: scroll;
+}
 section.main table {
 	border-collapse:collapse;
 	width: 100%;
@@ -63,7 +72,7 @@ section.main ul li a {
 }
 .alert {
 	position: fixed;
-	bottom: 10px;
+	top: 10px;
 	left: 0px;
 	width: 94%;
 	transition: .5s;
@@ -75,7 +84,7 @@ section.main ul li a {
 }
 
 .alert.hide {
-	bottom: -70px;
+	top: -100px;
 }
 .pages .page {
 	display: none;
@@ -91,4 +100,12 @@ section.main ul li a {
 }
 .pages .page.hide {
 	opacity: 0;
+}
+section.main button {
+	width: 100%;
+	color: #fff;
+	background: #dea166;
+	border: none;
+	padding: 10px;
+	margin-top: 15px;
 }
