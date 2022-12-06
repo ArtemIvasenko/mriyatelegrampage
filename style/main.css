@@ -9,6 +9,7 @@ body {
 	background-image: url("../images/main-bg.jpg");
 	background-size: cover;
 	background-position: center;
+	min-height: 100vh;
 }
 body:after {
     content: ' ';
@@ -38,9 +39,27 @@ section.main ul {
 
 section.main ul li{
 	list-style: none;
+	padding-top: 3px;
 }
 
 section.main ul li a {
 	color: #fff;
 	opacity: 0.9;
+	text-decoration: none;
+}
+.alert {
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	width: 94%;
+	transition: .5s;
+	background: #dea166;
+	color: #fff;
+	font-weight: 600;
+	padding: 5px;
+	margin: 0 3%;
+}
+
+.alert.hide {
+	bottom: -70px;
 }
