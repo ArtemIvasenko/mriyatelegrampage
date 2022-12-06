@@ -109,3 +109,12 @@ section.main button {
 	padding: 10px;
 	margin-top: 15px;
 }
+
+#page-analityc table {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+#page-analityc table td {
+	border: none;
+	width: 50%;
+}
