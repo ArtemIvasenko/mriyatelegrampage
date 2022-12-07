@@ -17,11 +17,12 @@
 					<h2>Навигация: </h2>
 					<ul>
 						<li onclick="openPage('transport');">Развозка</li>
+						<li onclick="openPage('learn');">Обучение</li>
+						<li onclick="openPage('analityc');">Отчеты</li>
 						<li onclick="openPage('legal');">Юридическая помощь</li>
 						<li onclick="openPage('salary');">Зарплата и отпуск</li>
 						<li onclick="openPage('navigator');">Навигатор</li>
 						<li onclick="openPage('shop');">Магазин</li>
-						<li onclick="openPage('analityc');">Отчеты</li>
 					</ul>
 				</section>	
 			</div>
@@ -31,6 +32,7 @@
 				<section class="main">
 					<div class="back-button" onclick="openPage('main');">← назад</div>
 					<h1>Информация о развозках</h1>
+					<a href="https://bus.mriya.me/" class="button-link">Открыть Mriya Bus</a>
 					<div class="table">
 					<table class="iksweb">
 						<tbody>
@@ -189,6 +191,42 @@
 							<td>10 122 123 руб</td>
 						</tr>
 					</table>
+				</section>	
+			</div>
+		</div>			
+		<div class="page" id="page-learn">
+			<div class="wrapper">
+				<section class="main">
+					<div class="back-button" onclick="openPage('main');">← назад</div>
+					<h1>Обучение</h1>
+					<p>Вам необходимо пройти следующие обязательные тренинги и электронные курсы:</p>
+					<div class="carts">
+						<div class="cart">
+							<h3>Эффективные коммуникации</h3>
+							<button>Записаться на 16 декабря</button>
+							<button onclick="showError()">Записаться на 24 декабря</button>
+						</div>
+						<div class="cart">
+							<h3>Эффективные продажи</h3>
+							<button onclick="showError()">Записаться на 17 декабря</button>
+						</div>
+						<div class="cart">
+							<h3>WOW - сервис</h3>
+							<button onclick="showError()">Записаться на 30 декабря</button>
+						</div>
+						<div class="cart">
+							<h3>Информационная безопасность</h3>
+							<button onclick="showError()">Перейти к курсу</button>
+						</div>
+						<div class="cart">
+							<h3>Угрозы террористического характера</h3>
+							<button onclick="showError()">Перейти к курсу</button>
+						</div>
+						<div class="cart">
+							<h3>Эффективная работа с жалобой</h3>
+							<button onclick="showError()">Перейти к курсу</button>
+						</div>
+					</div>
 				</section>	
 			</div>
 		</div>			
