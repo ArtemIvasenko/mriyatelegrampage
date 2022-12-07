@@ -193,6 +193,10 @@
 					<div id="chartContainer" style="height: 400px; width: 300px; margin: 0 auto;"></div>
 					<br>
 					<div id="chartContainer2" style="height: 400px; width: 300px; margin: 0 auto;"></div>
+					<br>
+					<div id="chartContainer3" style="height: 400px; width: 300px; margin: 0 auto;"></div>
+					<br>
+					<div id="chartContainer4" style="height: 400px; width: 300px; margin: 0 auto;"></div>
 				</section>	
 			</div>
 		</div>			
@@ -273,7 +277,8 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	theme: "dark1", // "light1", "light2", "dark1", "dark2"
 	width: 300,
 	title:{
-		text: "Кредиторская задолженность"
+		text: "Кредиторская задолженность",
+		fontFamily: "arial"
 	},
 	axisY: {
 		title: "Сумма"
@@ -296,7 +301,8 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	theme: "dark1", // "light1", "light2", "dark1", "dark2"
 	width: 300,
 	title:{
-		text: "Дебиторская задолженность"
+		text: "Дебиторская задолженность",
+		fontFamily: "arial"
 	},
 	axisY: {
 		title: "Сумма"
@@ -313,6 +319,64 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	}]
 });
 chart2.render();
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	theme: "dark2",
+	width: 300,
+	animationEnabled: true,
+	title: {
+		text: "Соблюдение времени поставки поставщиками"
+	},
+	data: [{
+		type: "pie",
+		indexLabelFontSize: 18,
+		radius: 80,
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "###0.0\"%\"",
+		click: explodePie,
+		dataPoints: [
+			{ y: 69, label: "В указаное время" },
+			{ y: 31, label: "Не вовремя"},
+		]
+	}]
+});
+chart3.render();
+
+function explodePie(e) {
+	for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+		if(i !== e.dataPointIndex)
+			e.dataSeries.dataPoints[i].exploded = false;
+	}
+}
+
+var chart4 = new CanvasJS.Chart("chartContainer4", {
+	theme: "dark2",
+	width: 300,
+	animationEnabled: true,
+	title: {
+		text: "Соотношение продаж бар/ресторан"
+	},
+	data: [{
+		type: "pie",
+		indexLabelFontSize: 18,
+		radius: 80,
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "###0.0\"%\"",
+		click: explodePie,
+		dataPoints: [
+			{ y: 32, label: "Бар" },
+			{ y: 68, label: "ресторан"},
+		]
+	}]
+});
+chart4.render();
+
+function explodePie(e) {
+	for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+		if(i !== e.dataPointIndex)
+			e.dataSeries.dataPoints[i].exploded = false;
+	}
+}
 
 }
 </script>
