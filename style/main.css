@@ -153,3 +153,14 @@ section.main button {
 .carts .cart h3 {
 	margin-bottom: 10px;
 }
+.page .url {
+	display: flex;
+	flex-wrap: wrap;
+}
+.page .url div {
+	margin: 0 10px 0 0;
+	font-size: 12px;
+}
+#page-legal ul li {
+	background-color: rgb(8 13 32 / 80%);
+}
