@@ -20,6 +20,7 @@
 						<li onclick="openPage('analityc');">Отчеты</li>
 						<li onclick="openPage('legal');">Юридическая помощь</li>
 						<li onclick="openPage('salary');">Зарплата и отпуск</li>
+						<li onclick="openPage('info');">Полезная информация</li>
 						<li onclick="openPage('security');">Безопасность</li>
 					</ul>
 				</section>	
@@ -106,7 +107,7 @@
 					<h1>Заплата и отпуск</h1>
 					<p>Заралата выплачивается 25 и 10 числа.</p>
 					<p>Остаток отпуска 15 дней.</p>
-					<button onclick="sendSelary()">Получить расчетный листок</button>
+					<button onclick="showError()">Получить расчетный листок</button>
 				</section>	
 			</div>
 		</div>
@@ -471,7 +472,117 @@
 					</div>
 				</section>	
 			</div>
-		</div>																							
+		</div>
+		<div class="page" id="page-info">
+			<div class="wrapper">
+				<section class="main">
+					<div class="back-button" onclick="openPage('main');">← назад</div>
+					<h1>Полезная информация</h1>
+					<ul class="nav">
+						<li onclick="openPage('info-1');">Акции и скидки</li>
+						<li onclick="openPage('info-2');">Учимся вместе с Mriya!</li>
+						<li onclick="openPage('info-3');">Корпоративные группы и сообщества</li>
+					</ul>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-info-1">
+			<div class="wrapper">
+				<section class="main">
+					<div class="url">
+						<div class="back-button" onclick="openPage('main');">Главное меню →</div>
+						<div class="back-button" onclick="openPage('info');">Полезная информация →</div>
+						<div class="back-button">Акции и скидки</div>
+					</div>
+					<br>
+					<div class="back-button" onclick="openPage('info');">← назад</div>
+					<br>
+					<h3>Акции и скидки</h3>
+					<p>Всю актуальную информацию по программе лояльности для сотрудников можно узнать на внутреннем сайте:  <a href="http://recreation-mriya.tilda.ws/loyalnost" style="color: red;">http://recreation-mriya.tilda.ws/loyalnost</a> Там же мы расскажем обо всех услугах Департамента рекреации и тематических парков <br>
+					<br>
+ 					Важно: прежде чем связаться с горячей линией, необходимо ознакомитесь с действующей информацией, и звонить только для бронирования услуг. <br>
+ 					<br>
+					❗️ Обращаем внимание, что данный сайт доступен только для внутреннего использования, поэтому его нельзя направлять гостям.</p>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-info-2">
+			<div class="wrapper">
+				<section class="main">
+					<div class="url">
+						<div class="back-button" onclick="openPage('main');">Главное меню →</div>
+						<div class="back-button" onclick="openPage('info');">Полезная информация →</div>
+						<div class="back-button">Учимся вместе с Mriya!</div>
+					</div>
+					<br>
+					<div class="back-button" onclick="openPage('info');">← назад</div>
+					<br>
+					<h3>Учимся вместе с Mriya!</h3>
+					<p> Бесплатное очное и онлайн-обучение от Академии гостеприимства. Вступай в группу (<a href="#" style="color: white;">https://t.me/joinchat/uymJ4yGNhlc4ZmUy</a>), чтобы следить за анонсами. <br>
+					<br>
+					Обязательные курсы на платформе Mirapolis <a href="https://talents.mriya.me/mira/" style="color: white;">https://talents.mriya.me/mira/</a><br><br>
+
+ 					Уроки английского в SkyEng. Компания оплачивает 50% стоимости занятий. Записывайся <a href="https://b24-1d82vr.bitrix24.site/crm_form_duweq/" style="color: white;">https://b24-1d82vr.bitrix24.site/crm_form_duweq/</a> чтобы подключиться к программе.<br>
+					Также SkyЕng предоставляет скидки на курсы для детей: <a href="https://corp.skyeng.ru/mriya" style="color: white;">https://corp.skyeng.ru/mriya</a> от подготовки к школе до разработки собственных сайтов.<br><br>
+
+					Более 500 различных курсов на Skillbox можно пройти со скидкой 55%. Делись промокодом MRIYA <a href="https://skillbox.ru/sale/partnership/?promocode=MRIYA" style="color: white;">https://skillbox.ru/sale/partnership/?promocode=MRIYA</a> с родными и друзьями, учитесь вместе!<br><br>
+
+					✌️ Яндекс.Практикум предоставляет скидку 10% для сотрудников Mriya на любую профессию. Активируй промокод <a href="https://t.me/c/1650663421/929" style="color: white;">https://t.me/c/1650663421/929</a> и вперёд к знаниям!<br><br>
+
+					Ученье - свет! Освети свой путь вместе с Mriya</p>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-info-3">
+			<div class="wrapper">
+				<section class="main">
+					<div class="url">
+						<div class="back-button" onclick="openPage('main');">Главное меню →</div>
+						<div class="back-button" onclick="openPage('info');">Полезная информация →</div>
+						<div class="back-button">Корпоративные группы и сообщества</div>
+					</div>
+					<br>
+					<div class="back-button" onclick="openPage('info');">← назад</div>
+					<br>
+					<h3>Корпоративные группы и сообщества</h3>
+					<p>
+						НАШИ ПОЛЕЗНЫЕ ЧАТЫ:<br><br>
+
+1. Mriya News - канал новостей для сотрудников Mriya Resort & Spa! Здесь мы публикуем все самые актуальные и проверенные новости, события, статьи, памятки и инструкции Команды мечты https://t.me/+KRShLB76eWZlMzk6 <br><br>
+
+2.❓Ваш GM - информационный канал генерального менеджера Беллы Геворгян для открытого диалога с сотрудниками – https://t.me/joinchat/CsIJFw7p-JA1MmRi Здесь можно задавать вопросы и узнавать о стратегии и развитии компании из первых уст. <br><br>
+
+3.Mriya Fans- - группа поддержки спортивных и других мероприятий компании. Болеем за наших вместе! – https://t.me/joinchat/dNSXqXt8Ca5kMWUy <br><br>
+
+4. Академия гостеприимства - обучающие программы и курсы, вебинары и тренинги. Здесь следим за графиком обучения и получаем полезные знания https://t.me/joinchat/uymJ4yGNhlc4ZmUy <br><br>
+
+5.Корпоративный Английский - ссылка для записи на онлайн занятия. Если ещё не зарегистрированы – https://b24-1d82vr.bitrix24.site/crm_form_duweq/ Индивидуальное обучение со скидкой 50%. Для активации подходим в отдел внутренних коммуникаций в Open Space. <br><br>
+
+7. Здоровье Mriya - группа по вопросам вакцинации и оздоровления  сотрудников https://t.me/+yNGFev6VlqplYmMy <br><br>
+
+8.ЭКОMriya - группа ЭКО-активистов. Здесь мы делимся новостями, организуем и участвуем в экомероприятиях https://t.me/joinchat/XJ0qXY9rVTMyZGQ6 <br><br>
+
+9.  КорпТрансфер_Mriya - группа новостей корпоративного трансфера для сотрудников команды мечты https://t.me/+i2ZkLW8VIeJlZjUy <br><br>
+
+10. Департамент ❤️ Добрых дел - это корпоративный волонтерский центр, к работе которого может присоединиться каждый сотрудник! https://t.me/Mriya_social <br><br>
+
+11.  Находки MRIYA -  группа, где потерянные вещи ищут хозяев и наоборот.  https://t.me/+O-IU2IpyX0AzMmY6 <br><br>
+
+12.Сосед Мечты - чат по поиску жилья и компаньонов из команды, чтобы быстро и выгодно снимать квартиру вместе – https://t.me/joinchat/yl-IUnJ1HqdkYWM6 <br><br>
+
+13.  Путешествия Mriya - группа любителей открывать для себя разные уголки Крыма вместе, присоединяйся к поездкам и походам https://t.me/+IJQiAvoGQ_U3ZGJi <br><br>
+
+14.  Mriya Travel - это организованные туры для сотрудников по выгодным ценам. Присоединяйся, если любишь путешествоватьhttps://t.me/AnapaMriya <br><br>
+
+15.  Mriya Shops - новости о поступлениях и новинках в магазинах комплекса для сотрудников https://t.me/+BsxfO7lVgHw4N2Ri <br><br>
+
+16. СЫРЫ Mriya: покупка сыров нашего производства со скидкой – https://t.me/joinchat/TM6TmmIMg8c1ZWU6 <br><br>
+
+17.  СЕВАС MRIYA - группа для сотрудников, которые живут в Севастополе https://t.me/+DCTgNNQvHy5mOGZi <br><br>
+					</p>
+				</section>	
+			</div>
+		</div>																									
 	</div>
 	
 	<div class="alert hide">
@@ -619,13 +730,6 @@ function explodePie(e) {
 }
 
 }
-</script>
-<script>
-	let tg = window.Telegram.WebApp;
-	function sendSelary(){
-		tg.sendData("some string that we need to send");
-		console.log("send salary");
-	}
 </script>
 </body>
 </html>
