@@ -106,7 +106,7 @@
 					<h1>Заплата и отпуск</h1>
 					<p>Заралата выплачивается 25 и 10 числа.</p>
 					<p>Остаток отпуска 15 дней.</p>
-					<button onclick="showError()">Получить расчетный листок</button>
+					<button onclick="sendSelary()">Получить расчетный листок</button>
 				</section>	
 			</div>
 		</div>
@@ -481,7 +481,7 @@
 	<script src="js/jquery.canvasjs.min.js"></script>
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
-		let tg = window.Telegram.WebApp;
+		
 
 		function getRandomInt(min, max) {
 		  return Math.floor(Math.random() * (max - min)) + min;
@@ -619,6 +619,12 @@ function explodePie(e) {
 }
 
 }
+</script>
+<script>
+	let tg = window.Telegram.WebApp;
+	function sendSelary(){
+		tg.sendData("Зарплата")	
+	}
 </script>
 </body>
 </html>
