@@ -20,8 +20,7 @@
 						<li onclick="openPage('analityc');">Отчеты</li>
 						<li onclick="openPage('legal');">Юридическая помощь</li>
 						<li onclick="openPage('salary');">Зарплата и отпуск</li>
-						<li onclick="openPage('navigator');">Навигатор</li>
-						<li onclick="openPage('shop');">Магазин</li>
+						<li onclick="openPage('security');">Безопасность</li>
 					</ul>
 				</section>	
 			</div>
@@ -88,7 +87,7 @@
 				<section class="main">
 					<div class="back-button" onclick="openPage('main');">← назад</div>
 					<h1>Юридическая помощь</h1>
-					<ul>
+					<ul class="nav">
 						<li onclick="openPage('legal-1');">Брак</li>
 						<li onclick="openPage('legal-2');">Долги, алименты</li>
 						<li onclick="openPage('legal-3');">Ипотека</li>
@@ -413,7 +412,66 @@
 					<button onclick="showError()">Задать вопрос юристу</button>
 				</section>	
 			</div>
-		</div>																						
+		</div>
+		<div class="page" id="page-security">
+			<div class="wrapper">
+				<section class="main">
+					<div class="back-button" onclick="openPage('main');">← назад</div>
+					<h1>Безопасность</h1>
+					<ul class="nav">
+						<li onclick="openPage('security-1');">Дежурный оператор</li>
+						<li onclick="openPage('security-2');">Памятка по ЧС</li>
+					</ul>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-security-1">
+			<div class="wrapper">
+				<section class="main">
+					<div class="url">
+						<div class="back-button" onclick="openPage('main');">Главное меню →</div>
+						<div class="back-button" onclick="openPage('security');">Безопасность →</div>
+						<div class="back-button">Дежурный оператор</div>
+					</div>
+					<br>
+					<div class="back-button" onclick="openPage('security');">← назад</div>
+					<br>
+					<h3>Дежурный оператор</h3>
+					<br>
+					<p>Номер дежурного оператора: +7-988-388-25-55</p>
+				</section>	
+			</div>
+		</div>
+		<div class="page" id="page-security-2">
+			<div class="wrapper">
+				<section class="main">
+					<div class="url">
+						<div class="back-button" onclick="openPage('main');">Главное меню →</div>
+						<div class="back-button" onclick="openPage('security');">Безопасность →</div>
+						<div class="back-button">Памятка по ЧС</div>
+					</div>
+					<br>
+					<div class="back-button" onclick="openPage('security');">← назад</div>
+					<br>
+					<h3>Памятка по ЧС</h3>
+					<br>
+					<h4>ПАМЯТКА ДЛЯ СОТРУДНИКА<br>
+					ВНЕШТАТНАЯ СИТУАЦИЯ НА ТЕРРИТОРИИ СКК МРИЯ</h4>
+					<p><i>(сбили БПЛА, повреждение объектов инфраструктуры комплекса, инженерных систем)</i></p>
+					<br>
+					<div>
+						<ul class="text-list">
+							<li>Сообщите о случившемся Дежурному оператору по номеру <b>7800</b> или <b>8 (988) 388-25-55</b></li>
+							<li>Оцените уровень угрозы и подробно опишите ситуацию Дежурному оператору: Кто звонит? Что случилось? Где случилось? Есть ли пострадавшие? Никого не подпускайте в опасную зону и ничего не трогайте. При наличии пострадавших необходимо оказать им первую доврачебную помощь</li>
+							<li>При отсутствии рисков для гостей и сотрудников ответственные на местах получат информацию о случившемся. Для предотвращения паники информируйте гостей: «Сохраняйте спокойствие, следуйте указаниям сотрудников»</li>
+							<li>При обнаружении угрозы на территории комплекса, сотрудники Службы безопасности оцепляют территорию — включение режима «ЧС» и «Антитеррор»</li>
+							<li>В оцепленной зоне работают сотрудники Службы безопасности, Инженерно-технической службы, при необходимости медицинский персонал</li>
+							<li>Сохраняйте спокойствие, получайте информацию от руководителя, продолжайте операционную деятельность</li>
+						</ul>
+					</div>
+				</section>	
+			</div>
+		</div>																							
 	</div>
 	
 	<div class="alert hide">
@@ -422,16 +480,22 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/jquery.canvasjs.min.js"></script>
 	<script>
+		function getRandomInt(min, max) {
+		  return Math.floor(Math.random() * (max - min)) + min;
+		}
 		function openPage(name) {
 			let pages = $('.pages .page');
+			let body = $('body');
+			
 			pages.addClass('hide');
+			
 
 			setTimeout(() => {  
 				pages.removeClass('hide');
 				pages.removeClass('active');
 				let page = $('#page-'+name);
 				page.addClass("active"); 
-				
+				body.css('background-image', 'url("images/bg/'+getRandomInt(1,7)+'.jpg")');
 							
 			}, 500);
 

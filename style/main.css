@@ -58,14 +58,14 @@ section.main table td {
 	background-color: rgba(0,0,0,0.6);
 }
 
-section.main ul {
+section.main > ul {
 	list-style: none;
 	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 }
 
-section.main ul li{
+section.main > ul li{
 	list-style: none;
 	padding-top: 5px;
 	background: rgba(222, 161, 102, 0.8);
@@ -161,6 +161,9 @@ section.main button {
 	margin: 0 10px 0 0;
 	font-size: 12px;
 }
-#page-legal ul li {
-	background-color: rgb(8 13 32 / 80%);
+ul.nav li {
+	background-color: rgb(8 13 32 / 80%) !important;
+}
+.text-list li {
+	margin-bottom: 10px;
 }
