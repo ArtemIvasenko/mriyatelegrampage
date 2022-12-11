@@ -479,7 +479,10 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/jquery.canvasjs.min.js"></script>
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
+		let tg = window.Telegram.WebApp;
+
 		function getRandomInt(min, max) {
 		  return Math.floor(Math.random() * (max - min)) + min;
 		}
@@ -495,7 +498,7 @@
 				pages.removeClass('active');
 				let page = $('#page-'+name);
 				page.addClass("active"); 
-				body.css('background-image', 'url("images/bg/'+getRandomInt(1,7)+'.jpg")');
+				//body.css('background-image', 'url("images/bg/'+getRandomInt(1,7)+'.jpg")');
 							
 			}, 500);
 
